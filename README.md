@@ -14,6 +14,8 @@ There are three notebooks used for webscraping the data from the AlloCiné websi
 - [Webscraping_Ratings_From_AlloCine.ipynb](https://github.com/Bastien-LDC/Allocine-Recommender-System/blob/master/Webscraping/Webscraping_Ratings_From_AlloCine.ipynb): for scraping the ratings of the press and the user for each movie and series.
 
 ### 📝 **Description of the data**
+
+**TO EDIT**
 We provide the dataset in two version :
 - A one csv files format (brut and clean versions) : [allocine_dataset.zip](http://olivier-maillot.fr/wp-content/uploads/2017/08/allocine_dataset.zip)
 - A multiple csv files format (clean version only): [allocine_rel-dataset.zip](http://olivier-maillot.fr/wp-content/uploads/2017/08/allocine_rel-dataset.zip)
@@ -96,5 +98,5 @@ After that, we can get the urls of the press and users comments sections for eac
 
 # 📄 **Licence**
 
-This project is part of my internship in a Consulting firm in Data, Digital & Technology. 
+This project is part of my internship mission at [AVISIA](https://www.avisia.fr/), a Consulting firm in Data, Digital & Technology. 
 
