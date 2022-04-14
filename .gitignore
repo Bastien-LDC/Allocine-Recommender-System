@@ -1,0 +1,6 @@
+# Ignore all created .csv
+*.csv
+*.png
+*.jpg
+# Ignore the Posters folder from Movies and Series
+Posters
