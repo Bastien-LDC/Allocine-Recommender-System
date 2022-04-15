@@ -6,16 +6,15 @@ AlloCiné is a company which provides information on French cinema and provide r
 
 First, we had to webscrape the data from the AlloCiné website. As I was new in webscraping, I inspired myself by using [the deprecated script](https://github.com/ibmw/Allocine-project/blob/master/Webscraping%20From%20AlloCine.ipynb) of a project I found on GitHub made by [Olivier Maillot](https://github.com/ibmw/Allocine-project), as well as his module to retrieve the data from allociné [here](https://github.com/ibmw/allocine-dataset-scraper).
 
-Therefore, I decided to fork the original project and build my own version of this webscraper. (I do not plan to do a pull request on the original project, as I don't want to change the original project, but only use it as reference.)
+Therefore, I decided to fork the original project at first and build my own version of this webscraper. (I do not plan to do a pull request on the original project, as I don't want to change the original project, but only use it as reference.) But for ownership and privacy reasons due to my internship, I created my own repo and set its accessibility to private.
 
 There are three notebooks used for webscraping the data from the AlloCiné website:
 - [Webscraping_Movies_From_AlloCine.ipynb](https://github.com/Bastien-LDC/Allocine-Recommender-System/blob/master/Webscraping/Webscraping_Movies_From_AlloCine.ipynb): for scraping the movies data.
 - [Webscraping_Series_From_AlloCine.ipynb](https://github.com/Bastien-LDC/Allocine-Recommender-System/blob/master/Webscraping/Webscraping_Series_From_AlloCine.ipynb): for scraping the series data.
 - [Webscraping_Ratings_From_AlloCine.ipynb](https://github.com/Bastien-LDC/Allocine-Recommender-System/blob/master/Webscraping/Webscraping_Ratings_From_AlloCine.ipynb): for scraping the ratings of the press and the user for each movie and series.
 
-### 📝 **Description of the data**
+### 📝 **Description of the data** **(TO EDIT)**
 
-**TO EDIT**
 We provide the dataset in two version :
 - A one csv files format (brut and clean versions) : [allocine_dataset.zip](http://olivier-maillot.fr/wp-content/uploads/2017/08/allocine_dataset.zip)
 - A multiple csv files format (clean version only): [allocine_rel-dataset.zip](http://olivier-maillot.fr/wp-content/uploads/2017/08/allocine_rel-dataset.zip)
@@ -90,7 +89,7 @@ After that, we can get the urls of the press and users comments sections for eac
 
 ## 👥 **Authors**
 
-* **Olivier Maillot** - *Initial work* - [AlloCiné Project](https://github.com/ibmw/Allocine-project) - [Blog Post](http://wp.me/p8Ffnw-4U)
+* **Olivier Maillot** - *Reference Project* - [AlloCiné Project](https://github.com/ibmw/Allocine-project) - [Blog Post](http://wp.me/p8Ffnw-4U)
 * **Bastien LEDUC** - *Webscraping and Recommender System* - [AlloCiné Recommender System](https://github.com/Bastien-LDC/Allocine-Recommender-System)
 
 ## 🧑‍🤝‍🧑 **Other Analysis**
@@ -98,5 +97,4 @@ After that, we can get the urls of the press and users comments sections for eac
 
 # 📄 **Licence**
 
-This project is part of my internship mission at [AVISIA](https://www.avisia.fr/), a Consulting firm in Data, Digital & Technology. 
-
+This project is part of my internship mission at [AVISIA](https://www.avisia.fr/), a Consulting firm in Data, Digital & Technology.
