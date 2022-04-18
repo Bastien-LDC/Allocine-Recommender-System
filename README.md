@@ -66,8 +66,8 @@ To simplify the scraping of the ratings, I had to break it down into 4 different
 - `user_movies_ratings`: contains the ratings made by the users/spectators for the movies
 
 All of these dataframes have the following similar columns:
-- `(user/press)_id`: AlloCiné user/press id
-- `user_name`: AlloCiné user name
+- `user_id`: AlloCiné user id (unavailable for the press)
+- `(user/press)_name`: AlloCiné user/press name
 - `(movie/series)_id`: AlloCiné movie/series id
 - `(user/press)_rating`: AlloCiné user/press rating (from 0.5 to 5 stars ⭐⭐⭐⭐⭐)
 - `date`: date of the rating (unavailable for the press)
@@ -84,7 +84,7 @@ After that, we can get the urls of the press and users comments sections for eac
   
 *📝Note: for the user ratings, we choose the keep the 100 first users with the most number of reviews for each movie/series. This will increase our chances to find a user multiple times, as we need to get several ratings from the same user in order to create a user profile for our recommender system.*
 
-(⚠️ **Warning** ⚠️: the process can take a while, depending on the number of pages you choose to scrape. It is recommended to use a dedicated computer for this process, as it can take a long time to complete, around 30 min for 20 pages.)
+(⚠️ **Warning** ⚠️: the process can take a while, depending on the number of pages you choose to scrape. It is recommended to use a dedicated computer for this process, as it can take a long time to complete.)
 
 
 ## 👥 **Authors**
