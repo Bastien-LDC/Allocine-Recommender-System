@@ -2,6 +2,7 @@
 ## 📖 **Description**
 AlloCiné is a company which provides information on French cinema and provide ratings from the press and from their users for a large number of movies and series. In this repository, we will scrape the website for movies and series data, as well as the ratings from the users that we will use to build a recommender system, based on the users' rating preferences.
 
+---
 ## 🗃️ **The Data**
 
 First, we had to webscrape the data from the AlloCiné website. As I was new in webscraping, I inspired myself by using [the deprecated script](https://github.com/ibmw/Allocine-project/blob/master/Webscraping%20From%20AlloCine.ipynb) of a project I found on GitHub made by [Olivier Maillot](https://github.com/ibmw/Allocine-project), as well as his module to retrieve the data from allociné [here](https://github.com/ibmw/allocine-dataset-scraper).
@@ -13,14 +14,35 @@ There are three notebooks used for webscraping the data from the AlloCiné websi
 - [Webscraping_Series_From_AlloCine.ipynb](https://github.com/Bastien-LDC/Allocine-Recommender-System/blob/master/Webscraping/Webscraping_Series_From_AlloCine.ipynb): for scraping the series data.
 - [Webscraping_Ratings_From_AlloCine.ipynb](https://github.com/Bastien-LDC/Allocine-Recommender-System/blob/master/Webscraping/Webscraping_Ratings_From_AlloCine.ipynb): for scraping the ratings of the press and the user for each movie and series.
 
-### 📝 **Description of the data** **(TO EDIT)**
+### 🧹**Data Cleaning**
+After scraping all the data, we proceed to a first data analysis and cleaning process in [this](https://github.com/Bastien-LDC/Allocine-Recommender-System/blob/master/Data%20Analysis/Allocine_Data_Analysis.ipynb) notebook.
 
-We provide the dataset in two version :
-- A one csv files format (brut and clean versions) : [allocine_dataset.zip](http://olivier-maillot.fr/wp-content/uploads/2017/08/allocine_dataset.zip)
-- A multiple csv files format (clean version only): [allocine_rel-dataset.zip](http://olivier-maillot.fr/wp-content/uploads/2017/08/allocine_rel-dataset.zip)
+### 📝 **Description of the data**
 
-The brut file contains **59 966 movies**, but only **10 424 movies** have both press and users ratings.
-If you decide to use the clean version, you directly start with the **10 424 movies** and if you decide to use the multiple csv files, you don't have to use ast library (see Getting Started).
+The latest data is dated from **May 6th, 2022** to **May 14th, 2022** and it was scraped from the first **600 pages** of the movies and series sections.
+
+If you are interested in it, the data from all the movies, series and ratings scraping is available here:
+- Raw data:
+    - [movies](https://storage.cloud.google.com/bucket-bastien/Saved%20Data/allocine_movies_600p.csv) (8026 movies including 7907 unique).
+    - [series](https://storage.cloud.google.com/bucket-bastien/Saved%20Data/allocine_series_600p.csv) (8126 series including 8001 unique).
+    - [press_ratings_movies](https://storage.cloud.google.com/bucket-bastien/Saved%20Data/press_ratings_movies_600p.csv).
+    - [press_ratings_series](https://storage.cloud.google.com/bucket-bastien/Saved%20Data/press_ratings_series_600p.csv).
+    - [user_ratings_movies](https://storage.cloud.google.com/bucket-bastien/Saved%20Data/user_ratings_movies_600p.csv).
+    - [user_ratings_series](https://storage.cloud.google.com/bucket-bastien/Saved%20Data/user_ratings_series_600p.csv).
+
+- Cleaned data:
+    - [movies](https://storage.cloud.google.com/bucket-bastien/Cleaned%20Data/movies.csv).
+    - [series](https://storage.cloud.google.com/bucket-bastien/Cleaned%20Data/series.csv).
+    - [press_movies](https://storage.cloud.google.com/bucket-bastien/Cleaned%20Data/press_movies.csv).
+    - [press_series](https://storage.cloud.google.com/bucket-bastien/Cleaned%20Data/press_series.csv).
+    - [user_movies](https://storage.cloud.google.com/bucket-bastien/Cleaned%20Data/user_movies.csv).
+    - [user_series](https://storage.cloud.google.com/bucket-bastien/Cleaned%20Data/user_series.csv).
+
+- Additional data:
+    - [movies_genres](https://storage.cloud.google.com/bucket-bastien/Cleaned%20Data/m_genres.csv).
+    - [series_genres](https://storage.cloud.google.com/bucket-bastien/Cleaned%20Data/s_genres.csv).
+    - [movies_nationality](https://storage.cloud.google.com/bucket-bastien/Cleaned%20Data/m_nationality.csv).
+    - [series_nationality](https://storage.cloud.google.com/bucket-bastien/Cleaned%20Data/s_nationality.csv).
 
 #### ℹ️ **The Movie Columns** 🎬:
 For the **movies** data, we have the following columns :
@@ -72,7 +94,26 @@ All of these dataframes have the following similar columns:
 - `(user/press)_rating`: AlloCiné user/press rating (from 0.5 to 5 stars ⭐⭐⭐⭐⭐)
 - `date`: date of the rating (unavailable for the press)
 
-### 🚀 **Getting Started**
+#### ℹ️ **The Genres Columns** 🎭:
+The **genres** dataframe is the same for the movies and the series. It contains the following columns :
+- `genres` : the genre name
+- `nb_movies/series` : number of movies/series in this genre
+- `avg_duration` : average duration of the movies/series in this genre
+- `median_duration` : median duration of the movies/series in this genre
+- `nb_press_rating` : number of ratings made by the press in this genre
+- `nb_user_rating` : number of ratings made by the users/spectators in this genre
+- `total_rating` : total rating made by the press and users in this genre
+- `press_rating_percentage` : percentage of the total rating made by the press in this genre
+- `user_rating_percentage` : percentage of the total rating made by the users/spectators in this genre
+- `movies/series_percentage` : percentage of the total number of movies/series in this genre
+
+#### ℹ️ **The Nationality Columns** 🌍:
+The **nationality** dataframe is built the same way as the **genres** one mentioned above, except that it lacks the `avg_duration` and `median_duration` per nationality.
+
+
+
+---
+## 🚀 **Getting Started**
 
 First, we need to install the dependencies in the *requirements.txt* file.
 ```bash
