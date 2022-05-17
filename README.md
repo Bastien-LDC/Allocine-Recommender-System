@@ -15,7 +15,7 @@ There are three notebooks used for webscraping the data from the AlloCiné websi
 - [Webscraping_Ratings_From_AlloCine.ipynb](https://github.com/Bastien-LDC/Allocine-Recommender-System/blob/master/Webscraping/Webscraping_Ratings_From_AlloCine.ipynb): for scraping the ratings of the press and the user for each movie and series.
 
 ### 🧹**Data Cleaning**
-After scraping all the data, we proceed to a first data analysis and cleaning process in [this](https://github.com/Bastien-LDC/Allocine-Recommender-System/blob/master/Data%20Analysis/Allocine_Data_Analysis.ipynb) notebook.
+After scraping all the data, we proceed to a first data analysis and cleaning process in this [notebook](https://github.com/Bastien-LDC/Allocine-Recommender-System/blob/master/Data%20Analysis/Allocine_Data_Analysis.ipynb).
 
 ### 📝 **Description of the data**
 
@@ -46,39 +46,40 @@ If you are interested in it, the data from all the movies, series and ratings sc
 
 #### ℹ️ **The Movie Columns** 🎬:
 For the **movies** data, we have the following columns :
-- `id` : AlloCiné movie id
-- `title` : the movies title (in french)
-- `release_date`: the release date
-- `duration`: the movies length
-- `genres` : the movies genres (as an array)
-- `directors` : movies directors (as an array)
-- `actors` : main movie actors (as an array)
-- `nationality`: nationality of the movies (as an array)
+- `id`: AlloCiné movie id
+- `title`: the movie title (in French)
+- `release_date`: the movie release date
+- `duration`: the movie length (in minutes)
+- `genres`: the movie genres (as a CSV string)
+- `directors`: movie directors (as a CSV string)
+- `actors`: main movie actors (as a CSV string)
+- `nationality`: nationality of the movie (as a CSV string)
 - `press_rating`: average press rating (from 0.5 to 5 stars ⭐⭐⭐⭐⭐)
 - `nb_press_rating`: number of ratings made by the press
 - `spect_rating`: average AlloCiné users rating (from 0.5 to 5 stars ⭐⭐⭐⭐⭐)
 - `nb_spect_rating`: number of ratings made by the users/spectators
-- `summary`: the movies summary
-- `poster_link`: url of the movies poster
+- `summary`: the movie summary (in French)
+- `poster_link`: url of the movie poster
 
 #### ℹ️ **The Series Columns** 📺:
 For the **series** data, we have the following columns :
-- `id` : AlloCiné series id
-- `title` : the series title (in french)
-- `release_date`: the release date
-- `duration`: the series average episode length
+- `id`: AlloCiné series id
+- `title`: the series title (in French)
+- `status`: the series status (in French) (En cours|Terminée|Annulée|À venir)
+- `release_date`: the series release date
+- `duration`: the series average episode length (in minutes)
 - `nb_seasons`: the number of seasons
 - `nb_episodes`: the number of episodes
-- `genres` : the series types (as an array)
-- `directors` : series directors (as an array)
-- `actors` : main actors of the series (as an array)
-- `nationality`: nationality of the series (as an array)
+- `genres`: the series genres (as a CSV string)
+- `directors`: series directors (as a CSV string)
+- `actors`: main actors of the series (as a CSV string)
+- `nationality`: nationality of the series (as a CSV string)
 - `press_rating`: average press rating (from 0.5 to 5 stars ⭐⭐⭐⭐⭐)
 - `nb_press_rating`: number of ratings made by the press
 - `spect_rating`: average AlloCiné users rating (from 0.5 to 5 stars ⭐⭐⭐⭐⭐)
 - `nb_spect_rating`: number of ratings made by the users/spectators
-- `summary`: short summary of the series in french
-- `poster`: url of the series poster
+- `summary`: the series summary in French
+- `poster_link`: url of the series poster
 
 #### ℹ️ **The Ratings Columns** 🏆:
 To simplify the scraping of the ratings, I had to break it down into 4 different files/dataframes:
@@ -87,7 +88,7 @@ To simplify the scraping of the ratings, I had to break it down into 4 different
 - `user_series_ratings`: contains the ratings made by the users/spectators for the series
 - `user_movies_ratings`: contains the ratings made by the users/spectators for the movies
 
-All of these dataframes have the following similar columns:
+All of these dataframes have the similar following columns:
 - `user_id`: AlloCiné user id (unavailable for the press)
 - `(user/press)_name`: AlloCiné user/press name
 - `(movie/series)_id`: AlloCiné movie/series id
@@ -97,7 +98,7 @@ All of these dataframes have the following similar columns:
 #### ℹ️ **The Genres Columns** 🎭:
 The **genres** dataframe is the same for the movies and the series. It contains the following columns :
 - `genres` : the genre name
-- `nb_movies/series` : number of movies/series in this genre
+- `nb_(movies/series)` : number of movies/series in this genre
 - `avg_duration` : average duration of the movies/series in this genre
 - `median_duration` : median duration of the movies/series in this genre
 - `nb_press_rating` : number of ratings made by the press in this genre
@@ -105,7 +106,7 @@ The **genres** dataframe is the same for the movies and the series. It contains 
 - `total_rating` : total rating made by the press and users in this genre
 - `press_rating_percentage` : percentage of the total rating made by the press in this genre
 - `user_rating_percentage` : percentage of the total rating made by the users/spectators in this genre
-- `movies/series_percentage` : percentage of the total number of movies/series in this genre
+- `(movies/series)_percentage` : percentage of the total number of movies/series in this genre
 
 #### ℹ️ **The Nationality Columns** 🌍:
 The **nationality** dataframe is built the same way as the **genres** one mentioned above, except that it lacks the `avg_duration` and `median_duration` per nationality.
@@ -123,7 +124,7 @@ Then, we can start the webscraping scripts for movies and series, in the *Webscr
 
 After that, we can get the urls of the press and users comments sections for each movie and series we retrieved, before starting the scraping process for the ratings. All generated *.csv* files will be stored in the *Ratings* folder in the *Movies* and *Series* sections.
   
-*📝Note: for the user ratings, we choose the keep the 100 first users with the most number of reviews for each movie/series. This will increase our chances to find a user multiple times, as we need to get several ratings from the same user in order to create a user profile for our recommender system.*
+*📝Note: for the user ratings, we choose the keep the 50 first users with the most number of reviews for each movie/series. This will increase our chances to find a user multiple times, as we need to get several ratings from the same user in order to create a user profile for our recommender system.*
 
 (⚠️ **Warning** ⚠️: the process can take a while, depending on the number of pages you choose to scrape. It is recommended to use a dedicated computer for this process, as it can take a long time to complete.)
 
