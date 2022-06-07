@@ -156,6 +156,7 @@ envers
 environ
 es
 ès
+ème
 est
 et
 etant
@@ -167,6 +168,7 @@ etc
 été
 etre
 être
+êtes
 eu
 euh
 eux
@@ -322,6 +324,7 @@ premier
 première
 premièrement
 près
+presque
 proche
 psitt
 puisque
