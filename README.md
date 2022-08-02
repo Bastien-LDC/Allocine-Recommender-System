@@ -120,13 +120,24 @@ First, we need to install the dependencies in the *requirements.txt* file.
 ```bash
 pip install -r requirements.txt
 ```
+Alternatively, you can use conda to create your environment and install the dependencies.
+```bash
+conda create --name envname python=3.9
+conda install --force-reinstall --name envname -c conda-forge --file requirements.txt
+conda activate envname
+...
+conda deactivate
+```
+
+*📝Note 1: Make sure you set-up your environment **correctly** and that **all libraries are available** in your IDE before proceeding to the next steps. Some environments or Python versions may require other dependencies that I have not succeeded in installing. I managed to deal with this issue by moving from my current Python 3.9.5 64-bit environment to a new **`conda environment`**.*
+
 Then, we can start the webscraping scripts for movies and series, in the *Webscraping* folder. You can choose for each script the number of pages to scrape, at the rate of 15 movies/series per page. All generated *.csv* files will be stored in the *Data* folder in the *Movies* and *Series* sections.
 
 After that, we can get the urls of the press and users comments sections for each movie and series we retrieved, before starting the scraping process for the ratings. All generated *.csv* files will be stored in the *Ratings* folder in the *Movies* and *Series* sections.
   
-*📝Note: for the user ratings, we choose the keep the 50 first users with the most number of reviews for each movie/series. This will increase our chances to find a user multiple times, as we need to get several ratings from the same user in order to create a user profile for our recommender system.*
+*📝Note 2: for the user ratings, we choose the keep the 50 first users with the most number of reviews for each movie/series. This will increase our chances to find a user multiple times, as we need to get several ratings from the same user in order to create a user profile for our recommender system.*
 
-(⚠️ **Warning** ⚠️: the process can take a while, depending on the number of pages you choose to scrape. It is recommended to use a dedicated computer for this process, as it can take a long time to complete.)
+(⚠️ **Warning** ⚠️: the process can take a while, depending on the number of pages you choose to scrape. It is recommended to use a dedicated computer/environment for this process, as it can take a long time to complete.)
 
 
 ## 👥 **Authors**
