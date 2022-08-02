@@ -6,4 +6,6 @@ requests==2.26.0
 scikit-learn
 ipywidgets
 tqdm
+spacy
 implicit
+scikit-surprise

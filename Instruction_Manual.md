@@ -1,4 +1,4 @@
-# 🎦 **AlloCiné Movies and Series Recommender System: Instructions Manual** 📖🎬
+# 🎦 **AlloCiné Movies and Series Recommender System: Instruction Manual** 📖🎬
 
 After having installed the environment and the dependencies, you can start the recommender system by running the following notebooks:
 
@@ -11,14 +11,16 @@ For both [movies](https://github.com/Bastien-LDC/Allocine-Recommender-System/blo
     - for **movies** and **series**: select the parameters values you want to use for the scraping (`start_page`, `end_page`, `nb_pages`) before running the next cells.
     - for **ratings**: reload the movies and series dataframes. Set the parameters of the `getCommentsUrl(...)` function and run it. Run the `"Loading the comments section urls"` cells. You can choose what you want to load (`movies`, `series`, `movies+series`, `user`, `press`, `user+press`) before running the next cells. This allows you to load only the urls you want before scraping the ratings. Finally, enter the number of maximum users you want to load (`nb_users`) for each item, the number of folds to split the movies and series urls and the fold number you want to start with (`fold_start`) (in case the script shuts down to a certain fold, you can pick it up to the last fold and not run everything again).
 
-For more details, see the [Technical Report](https://github.com/Bastien-LDC/Allocine-Recommender-System/blob/master/Docs/Recommender_System_-_Technical_report_(V3).pdf).
+For more details, see the [Technical Report](https://github.com/Bastien-LDC/Allocine-Recommender-System/blob/master/Docs/Recommender_System_-_Technical_report.pdf).
 
 ## 📊**Data Analysis**📉
+In this [notebook](https://github.com/Bastien-LDC/Allocine-Recommender-System/blob/master/Data%20Analysis/Allocine_Data_Analysis.ipynb):
 - Run the `"Import Libs"` cell. Make sure every library is installed correctly and available in your environment.
 - Change the file path of the dataframes in the `load_csv(...)` function. Personally, I manually renamed and placed all the final CSV dataframes in the `Saved Data` folder so that they are not altered by another run of the scraping scripts. 
 - Finally, you can run all the cells chronologically.
 
-## 📚**Recommendation System**📚
+## 🎯**Recommendation System**📚
+In this [notebook](https://github.com/Bastien-LDC/Allocine-Recommender-System/blob/master/Recommendation/Allocine_Recommender_System.ipynb):
 - Run the `"Import Libs"` cell. Make sure every library is installed correctly and available in your environment.
 - Run all the `"Functions"` cells starting from the `"Loading the csv files"` cell to the `"Model CB N°1"` cell excluded.
 - For **Content-Based**:
