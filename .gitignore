@@ -1,8 +1,10 @@
 # Ignore all created .csv, .png and .jpg files
-*.csv
 *.png
 *.jpg
 
 # Ignore the Posters folder from Movies and Series 
 Posters
+Comments
+Data
+Ratings
 *.ipynb_checkpoints/
