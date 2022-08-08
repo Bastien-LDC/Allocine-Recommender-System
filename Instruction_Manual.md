@@ -27,9 +27,13 @@ In this [notebook](https://github.com/Bastien-LDC/Allocine-Recommender-System/bl
     - Unwrap the cells of the model you'd like to use and run them one by one.
     - You can try change the parameters of the functions to see how the model performs.
     - For some models, some cells were duplicated with slight parameters changes to compare the results of different models.
+    - Some plots were made for **`Model CB N°3`** and **`Model CB N°4`** to compare the results of the models.
+    - For **`Model CB N°4`**, it is possible to save the models predictions into dataframes that can be used for the model comparison at the end of the notebook.
 - For **Collaborative Filtering**:
     - You can run the `"Plots"` cells to see the sparsity and long tail of our database (optional).
     - Run the `"Functions"` cells.
-    - For the **`Model CF N°1`**, you can execute the model in the `Model` section as well as the RMSE and MAE of the model in the `Metrics` section.
+    - For the **`Model CF N°1`**, you can execute the model in the `Model` section as well as the RMSE and MAE of the model in the `Metrics` section. It is possible to save the models predictions into dataframes that can be used for the model comparison at the end of the notebook.
     - For the **`Model CF N°2`**, first define the sparse data variable for the model. Secondly, estimate the best parameters of the SVD algorithm with Cross-Validation and Grid Search. Then, run the model with the best parameters. Finally, print the top *n* predictions of the model for each user. 
+    - In the end, you can compare the results of most of the computed models so far with the `"Models' Analysis"` part.
 
+****Note***📝: There was some issues regarding the installation of the `surprise` and `recmetrics` packages. Both couldn't coexist in the same environment as `surprise` was only successfully installed in a `conda` environment, and that `recmetrics` was only available on Python. Therefore, the last part of the Collaborative-Filtering chapter was semi-compromised as not every cell of the notebook can be executed, so error about **missing packages** and **undefined functions** will occur. Until both dependencies can be installed in the same environment, a temporary CSV file has been saved, resulting from the computation of the SVD model using `surprise`. I contains the user ids, movie ids, the actual rating and the predicted ratings of the model. This dataset can be used as it is in the `models_analysis(...)` function.*
