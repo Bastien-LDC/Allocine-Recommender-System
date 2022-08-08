@@ -1,8 +1,7 @@
-# Ignore all created .csv, .png and .jpg files
+# Ignore all created .png files of plots...
 *.png
 
-# Ignore the Posters folder from Movies and Series 
-Series/Posters
+#...and .csv files from the following folders:
 Comments
 Data
 Ratings
