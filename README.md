@@ -23,26 +23,26 @@ The latest data is dated from **May 6th, 2022** to **May 14th, 2022** and it was
 
 If you are interested in it, the data from all the movies, series and ratings scraping is available here:
 - Raw data:
-    - [movies](https://storage.cloud.google.com/bucket-bastien/Saved%20Data/allocine_movies_600p.csv) (8026 movies including 7907 unique).
-    - [series](https://storage.cloud.google.com/bucket-bastien/Saved%20Data/allocine_series_600p.csv) (8126 series including 8001 unique).
-    - [press_ratings_movies](https://storage.cloud.google.com/bucket-bastien/Saved%20Data/press_ratings_movies_600p.csv).
-    - [press_ratings_series](https://storage.cloud.google.com/bucket-bastien/Saved%20Data/press_ratings_series_600p.csv).
-    - [user_ratings_movies](https://storage.cloud.google.com/bucket-bastien/Saved%20Data/user_ratings_movies_600p.csv).
-    - [user_ratings_series](https://storage.cloud.google.com/bucket-bastien/Saved%20Data/user_ratings_series_600p.csv).
+    - [movies](https://github.com/Bastien-LDC/Allocine-Recommender-System/blob/master/Saved%20Data/allocine_movies_600p.csv) (8026 movies including 7907 unique).
+    - [series](https://github.com/Bastien-LDC/Allocine-Recommender-System/blob/master/Saved%20Data/allocine_series_600p.csv) (8126 series including 8001 unique).
+    - [press_ratings_movies](https://github.com/Bastien-LDC/Allocine-Recommender-System/blob/master/Saved%20Data/press_ratings_movies_600p.csv).
+    - [press_ratings_series](https://github.com/Bastien-LDC/Allocine-Recommender-System/blob/master/Saved%20Data/press_ratings_series_600p.csv).
+    - [user_ratings_movies](https://github.com/Bastien-LDC/Allocine-Recommender-System/blob/master/Saved%20Data/user_ratings_movies_600p.csv).
+    - [user_ratings_series](https://github.com/Bastien-LDC/Allocine-Recommender-System/blob/master/Saved%20Data/user_ratings_series_600p.csv).
 
 - Cleaned data:
-    - [movies](https://storage.cloud.google.com/bucket-bastien/Cleaned%20Data/movies.csv).
-    - [series](https://storage.cloud.google.com/bucket-bastien/Cleaned%20Data/series.csv).
-    - [press_movies](https://storage.cloud.google.com/bucket-bastien/Cleaned%20Data/press_movies.csv).
-    - [press_series](https://storage.cloud.google.com/bucket-bastien/Cleaned%20Data/press_series.csv).
-    - [user_movies](https://storage.cloud.google.com/bucket-bastien/Cleaned%20Data/user_movies.csv).
-    - [user_series](https://storage.cloud.google.com/bucket-bastien/Cleaned%20Data/user_series.csv).
+    - [movies](https://github.com/Bastien-LDC/Allocine-Recommender-System/blob/master/Cleaned%20Data/movies.csv).
+    - [series](https://github.com/Bastien-LDC/Allocine-Recommender-System/blob/master/Cleaned%20Data/series.csv).
+    - [press_movies](https://github.com/Bastien-LDC/Allocine-Recommender-System/blob/master/Cleaned%20Data/press_movies.csv).
+    - [press_series](https://github.com/Bastien-LDC/Allocine-Recommender-System/blob/master/Cleaned%20Data/press_series.csv).
+    - [user_movies](https://github.com/Bastien-LDC/Allocine-Recommender-System/blob/master/Cleaned%20Data/user_movies.csv).
+    - [user_series](https://github.com/Bastien-LDC/Allocine-Recommender-System/blob/master/Cleaned%20Data/user_series.csv).
 
 - Additional data:
-    - [movies_genres](https://storage.cloud.google.com/bucket-bastien/Cleaned%20Data/m_genres.csv).
-    - [series_genres](https://storage.cloud.google.com/bucket-bastien/Cleaned%20Data/s_genres.csv).
-    - [movies_nationality](https://storage.cloud.google.com/bucket-bastien/Cleaned%20Data/m_nationality.csv).
-    - [series_nationality](https://storage.cloud.google.com/bucket-bastien/Cleaned%20Data/s_nationality.csv).
+    - [movies_genres](https://github.com/Bastien-LDC/Allocine-Recommender-System/blob/master/Cleaned%20Data/m_genres.csv).
+    - [series_genres](https://github.com/Bastien-LDC/Allocine-Recommender-System/blob/master/Cleaned%20Data/s_genres.csv).
+    - [movies_nationality](https://github.com/Bastien-LDC/Allocine-Recommender-System/blob/master/Cleaned%20Data/m_nationality.csv).
+    - [series_nationality](https://github.com/Bastien-LDC/Allocine-Recommender-System/blob/master/Cleaned%20Data/s_nationality.csv).
 
 #### ℹ️ **The Movie Columns** 🎬:
 For the **movies** data, we have the following columns :
