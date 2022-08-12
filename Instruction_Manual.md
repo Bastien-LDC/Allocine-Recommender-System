@@ -16,8 +16,8 @@ For more details, see the [Technical Report](https://github.com/Bastien-LDC/Allo
 ## 📊**Data Analysis**📉
 In this [notebook](https://github.com/Bastien-LDC/Allocine-Recommender-System/blob/master/Data%20Analysis/Allocine_Data_Analysis.ipynb):
 - Run the `"Import Libs"` cell. Make sure every library is installed correctly and available in your environment.
-- Change the file path of the dataframes in the `load_csv(...)` function. Personally, I manually renamed and placed all the final CSV dataframes in the `Saved Data` folder so that they are not altered by another run of the scraping scripts. 
-- Finally, you can run all the cells chronologically.
+- Change the file path of the dataframes in the `load_csv(...)` function (if necessary). Personally, I manually renamed and placed all the final CSV dataframes in the `Saved Data` folder so that they are not altered by another run of the scraping scripts. 
+- Finally, you can run all the cells sequentially.
 
 ## 🎯**Recommendation System**📚
 In this [notebook](https://github.com/Bastien-LDC/Allocine-Recommender-System/blob/master/Recommendation/Allocine_Recommender_System.ipynb):
@@ -28,7 +28,7 @@ In this [notebook](https://github.com/Bastien-LDC/Allocine-Recommender-System/bl
     - You can try change the parameters of the functions to see how the model performs.
     - For some models, some cells were duplicated with slight parameters changes to compare the results of different models.
     - Some plots were made for **`Model CB N°3`** and **`Model CB N°4`** to compare the results of the models.
-    - For **`Model CB N°4`**, it is possible to save the models predictions into dataframes that can be used for the model comparison at the end of the notebook.
+    - For **`Model CB N°4`**, it is possible to save the models predictions into dataframes that can be used for the model comparison at the end of the notebook. (*Though it may run correctly, I am still not sure about the obtained results.*)
 - For **Collaborative Filtering**:
     - You can run the `"Plots"` cells to see the sparsity and long tail of our database (optional).
     - Run the `"Functions"` cells.

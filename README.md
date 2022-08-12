@@ -139,7 +139,6 @@ After that, we can get the urls of the press and users comments sections for eac
 
 🎯For more precisions, you can check the [Instruction Manual](https://github.com/Bastien-LDC/Allocine-Recommender-System/blob/master/Instruction_Manual.md) and the [Technical Report](https://github.com/Bastien-LDC/Allocine-Recommender-System/blob/master/Docs/Recommender_System_-_Technical_report.pdf) where all functions from `Web Scraping` to `Data Analysis` are explained.🎯
 
-
 (⚠️ **Warning** ⚠️: the process can take a while, depending on the number of pages you choose to scrape. It is recommended to use a dedicated computer/environment for this process, as it can take a long time to complete.)
 
 
